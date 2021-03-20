@@ -1,0 +1,23 @@
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+      probes:
+        enabled: true
+    shutdown:
+      enabled: true
+  metrics:
+    export:
+      jmx:
+        enabled: false
+server:
+  shutdown: graceful
+spring:
+  application:
+    name: actuator-demo
